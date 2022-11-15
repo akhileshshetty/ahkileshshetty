@@ -5,3 +5,9 @@
 .headerText {
     font-size: 300;
 }
+
+.headerPadding {
+    font-size: 300;
+    padding: 10;
+    padding-top: 5;
+}

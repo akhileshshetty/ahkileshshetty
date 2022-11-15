@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import './fonts/My-Avenir-LT-35-Light.ttf';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

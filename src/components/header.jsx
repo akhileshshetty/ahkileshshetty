@@ -1,37 +1,45 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import compStyles from "./comp.module.css";
 
 class WebsiteHeader extends Component {
   state = {};
   render() {
     return (
-      <div className="App-text p-2">
-        <span style={{fontSize: 30, fontWeight: 100}}>
-          AKHILESH SHETTY
-          </span>
-          <br />
-          <div class="justify-content-around">
-            
-              <Link to="/"> Home </Link>
-            
-              <Link to="/filmography">
-                Filmography
-              </Link>
-          
-              <Link to="/photography">
-                Photography
-              </Link>
-              <Link to="/paintings">
-                Paintings
-              </Link>
-              <Link to="/about">
-                About
-              </Link>
-              </div>
-      </div>
+      <DesktopHeader />
     );
   }
 }
 
 export default WebsiteHeader;
+
+
+// style={{padding: 10, paddingTop: 5}}
+function DesktopHeader(){
+  return(
+    <div className="App-text p-2">
+      <br/>
+        <span className="App-text-brandon App-header">
+          AKHILESH SHETTY
+          </span>
+          <br />
+          <div className="App-text-avenir" style={{justifyContent: 'space-around', fontSize: 15}}>
+            
+              <Link to="/" > Home </Link>
+            
+              <Link to="/filmography" className="App-header-nav-items">
+                Filmography
+              </Link>
+          
+              <Link to="/photography" >
+                Photography
+              </Link>
+              <Link to="/paintings" >
+                Paintings
+              </Link>
+              <Link to="/about" >
+                About
+              </Link>
+              </div>
+      </div>
+  );
+}
