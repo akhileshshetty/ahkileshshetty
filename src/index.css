@@ -18,3 +18,7 @@ code {
     url("./fonts/My-Avenir-LT-35-Light.ttf") format("truetype");
   font-weight: normal;
 }
+
+.section-heading{
+  font-size: 200;
+}

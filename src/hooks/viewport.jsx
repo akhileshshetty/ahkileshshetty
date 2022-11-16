@@ -19,3 +19,5 @@ const useViewport = () => {
   // Return both the height and width
   return { width, height };
 };
+
+export default useViewport;

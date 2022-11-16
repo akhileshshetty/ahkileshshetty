@@ -25,6 +25,13 @@
   color: white;
 }
 
+.App-header-mob {
+  /* align-items: left;
+  justify-content: space-between; */
+  font-size: calc(20px + 2vmin);
+  color: white;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -44,9 +51,5 @@
 
 .App-text-avenir {
   font-family: "LcAvenir";
-  font-size: 200;
 }
 
-.App-header-nav-items {
-  font-size: 100;
-}

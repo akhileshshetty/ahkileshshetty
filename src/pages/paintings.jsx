@@ -8,12 +8,16 @@ import ptng5 from '../assets/images/paintings/ptng5.webp';
 import ptng6 from '../assets/images/paintings/ptng6.webp';
 import ptng7 from '../assets/images/paintings/ptng7.webp';
 
+import "../index.css";
+
 class PaintingsPage extends Component {
   state = {};
   render() {
     return (
       <div className="App-text">
-        <h1>Paintings</h1>
+        <span className="App-text-brandon section-heading">Paintings</span>
+        <br />
+        <br />
         
         <p>When I was a kid my mother used to go to art classes
         where she learned to make oil paintings. I was fascinated as a child to

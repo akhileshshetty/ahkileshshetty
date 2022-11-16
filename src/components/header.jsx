@@ -1,63 +1,112 @@
 import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "../hooks/viewport";
+import { slide as Menu } from "react-burger-menu";
+import useViewport from "../hooks/viewport";
+import "../styles.css";
 
 function WebsiteHeader() {
-  const {width, height} = useViewport();
+  const { width, height } = useViewport();
   const breakpoint = 620;
-  return  width < breakpoint ? <MobileHeader/> : <DesktopHeader />;
+  return width < breakpoint ? (
+    <MobileHeader width={width} height={height} />
+  ) : (
+    <DesktopHeader />
+  );
 }
 
 export default WebsiteHeader;
 
-function DesktopHeader() {
-  const navItemStyleDesktop = { padding: "calc(10px + 1vmin)", paddingTop: 5 };
+function MobileHeader(props) {
+  const navItemStyleMob = { padding: "calc(20px + 1vmin)", fontSize: 20 };
+  var styles = {
+    bmBurgerButton: {
+      position: "fixed",
+      width: "18px",
+      height: "15px",
+      right: "36px",
+      top: "23px",
+    },
+    bmBurgerBars: {
+      background: "white",
+    },
+    bmBurgerBarsHover: {
+      background: "white",
+    },
+    bmCrossButton: {
+      height: "24px",
+      width: "24px",
+    },
+    bmCross: {
+      background: "#bdc3c7",
+    },
+    bmMenuWrap: {
+      position: "fixed",
+      height: "100%",
+    },
+    bmMenu: {
+      background: "black",
+      padding: "2.5em 1.5em 0",
+      fontSize: "1.15em",
+    },
+    bmMorphShape: {
+      fill: "#373a47",
+    },
+    bmItemList: {
+      color: "#white",
+      padding: "0.8em",
+    },
+    bmOverlay: {
+      background: "rgba(0, 0, 0, 0.3)",
+    },
+  };
   return (
-    <div className="App-text p-2">
-      <br />
-      <span className="App-text-brandon App-header">AKHILESH SHETTY</span>
-      <br />
-      <div
+    <div
+      className="App-text p-2"
+    >
+      {/* <br /> */}
+      <span className="App-text-brandon App-header-mob">AKHILESH SHETTY</span>
+      {/* <br /> */}
+      <Menu
+        right
+        width={props.width}
+        height={props.height}
         className="App-text-avenir"
-        style={{ justifyContent: "space-around", fontSize: 18 }}
+        styles={styles}
       >
-        <Link to="/" style={navItemStyleDesktop}>
-          {" "}
-          Home{" "}
+        <Link to="/" style={navItemStyleMob}>
+          Home
         </Link>
 
-        <Link to="/filmography" style={navItemStyleDesktop}>
+        <Link to="/filmography" style={navItemStyleMob}>
           Filmography
         </Link>
 
-        <Link to="/photography" style={navItemStyleDesktop}>
+        <Link to="/photography" style={navItemStyleMob}>
           Photography
         </Link>
-        <Link to="/paintings" style={navItemStyleDesktop}>
+        <Link to="/paintings" style={navItemStyleMob}>
           Paintings
         </Link>
-        <Link to="/about" style={navItemStyleDesktop}>
+        <Link to="/about" style={navItemStyleMob}>
           About
         </Link>
-      </div>
+      </Menu>
     </div>
   );
 }
-function MobileHeader() {
-  const navItemStyleDesktop = { padding: "calc(10px + 1vmin)", paddingTop: 5 };
+
+function DesktopHeader() {
+  const navItemStyleDesktop = { padding: "calc(10px + 1vmin)", paddingTop: 5};
   return (
     <div className="App-text p-2">
-      <br />
       <span className="App-text-brandon App-header">AKHILESH SHETTY</span>
-      <br />
       <div
         className="App-text-avenir"
         style={{ justifyContent: "space-around", fontSize: 18 }}
       >
         <Link to="/" style={navItemStyleDesktop}>
-          {" "}
-          Home{" "}
+          Home
         </Link>
 
         <Link to="/filmography" style={navItemStyleDesktop}>
