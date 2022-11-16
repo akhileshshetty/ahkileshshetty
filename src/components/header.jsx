@@ -1,45 +1,79 @@
+import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "../hooks/viewport";
 
-class WebsiteHeader extends Component {
-  state = {};
-  render() {
-    return (
-      <DesktopHeader />
-    );
-  }
+function WebsiteHeader() {
+  const {width, height} = useViewport();
+  const breakpoint = 620;
+  return  width < breakpoint ? <MobileHeader/> : <DesktopHeader />;
 }
 
 export default WebsiteHeader;
 
-
-// style={{padding: 10, paddingTop: 5}}
-function DesktopHeader(){
-  return(
+function DesktopHeader() {
+  const navItemStyleDesktop = { padding: "calc(10px + 1vmin)", paddingTop: 5 };
+  return (
     <div className="App-text p-2">
-      <br/>
-        <span className="App-text-brandon App-header">
-          AKHILESH SHETTY
-          </span>
-          <br />
-          <div className="App-text-avenir" style={{justifyContent: 'space-around', fontSize: 15}}>
-            
-              <Link to="/" > Home </Link>
-            
-              <Link to="/filmography" className="App-header-nav-items">
-                Filmography
-              </Link>
-          
-              <Link to="/photography" >
-                Photography
-              </Link>
-              <Link to="/paintings" >
-                Paintings
-              </Link>
-              <Link to="/about" >
-                About
-              </Link>
-              </div>
+      <br />
+      <span className="App-text-brandon App-header">AKHILESH SHETTY</span>
+      <br />
+      <div
+        className="App-text-avenir"
+        style={{ justifyContent: "space-around", fontSize: 18 }}
+      >
+        <Link to="/" style={navItemStyleDesktop}>
+          {" "}
+          Home{" "}
+        </Link>
+
+        <Link to="/filmography" style={navItemStyleDesktop}>
+          Filmography
+        </Link>
+
+        <Link to="/photography" style={navItemStyleDesktop}>
+          Photography
+        </Link>
+        <Link to="/paintings" style={navItemStyleDesktop}>
+          Paintings
+        </Link>
+        <Link to="/about" style={navItemStyleDesktop}>
+          About
+        </Link>
       </div>
+    </div>
+  );
+}
+function MobileHeader() {
+  const navItemStyleDesktop = { padding: "calc(10px + 1vmin)", paddingTop: 5 };
+  return (
+    <div className="App-text p-2">
+      <br />
+      <span className="App-text-brandon App-header">AKHILESH SHETTY</span>
+      <br />
+      <div
+        className="App-text-avenir"
+        style={{ justifyContent: "space-around", fontSize: 18 }}
+      >
+        <Link to="/" style={navItemStyleDesktop}>
+          {" "}
+          Home{" "}
+        </Link>
+
+        <Link to="/filmography" style={navItemStyleDesktop}>
+          Filmography
+        </Link>
+
+        <Link to="/photography" style={navItemStyleDesktop}>
+          Photography
+        </Link>
+        <Link to="/paintings" style={navItemStyleDesktop}>
+          Paintings
+        </Link>
+        <Link to="/about" style={navItemStyleDesktop}>
+          About
+        </Link>
+      </div>
+    </div>
   );
 }
