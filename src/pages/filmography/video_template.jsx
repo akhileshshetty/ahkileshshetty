@@ -1,27 +1,26 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import useViewport from "../../hooks/viewport";
 
-function VideoTemplate () {
-
+function VideoTemplate (props) {
+  const {width} = useViewport();
+  const breakpoint = 800; 
     return (
       <div>
         <Container>
         <Row>
           <Col >
-            <h1>Title</h1>
+            <h1>{props.vid.title}</h1>
             <p>
-              Atul, a 26 year old, who recently broke up finds it increasingly
-              hard to be alone. This creates problems in his life and his
-              closest friend Saksham's life. the situation deteriorates until he
-              is forced to acknowledge and accept his condition.
+              {props.vid.disc}
             </p>
           </Col>
           <Col>
             <iframe
               width="402"
               height="226"
-              src="https://www.youtube.com/embed/VdRhDjh560s"
-              title="Chudakaran - A docu-short"
+              src={`https://www.youtube.com/embed/${props.vid.id}`}
+              // title="Chudakaran - A docu-short"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen

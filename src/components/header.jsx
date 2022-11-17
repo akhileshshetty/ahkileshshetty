@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import useViewport from "../hooks/viewport";
 import "../styles.css";
+import { useState } from "react";
 
 function WebsiteHeader() {
   const { width, height } = useViewport();
@@ -19,6 +20,15 @@ export default WebsiteHeader;
 
 function MobileHeader(props) {
   const navItemStyleMob = { padding: "calc(20px + 1vmin)", fontSize: 20 };
+  const [isOpen, setOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setOpen(!isOpen)
+  }
+
+  const closeMenu = () => {
+    setOpen(false)
+  }
   var styles = {
     bmBurgerButton: {
       position: "fixed",
@@ -73,22 +83,25 @@ function MobileHeader(props) {
         height={props.height}
         className="App-text-avenir"
         styles={styles}
+        isOpen={isOpen}
+        onOpen={toggleOpen}
+        onClose={toggleOpen}
       >
-        <Link to="/" style={navItemStyleMob}>
+        <Link to="/" style={navItemStyleMob} onClick={closeMenu}>
           Home
         </Link>
 
-        <Link to="/filmography" style={navItemStyleMob}>
+        <Link to="/filmography" style={navItemStyleMob} onClick={closeMenu}>
           Filmography
         </Link>
 
-        <Link to="/photography" style={navItemStyleMob}>
+        <Link to="/photography" style={navItemStyleMob} onClick={closeMenu}>
           Photography
         </Link>
-        <Link to="/paintings" style={navItemStyleMob}>
+        <Link to="/paintings" style={navItemStyleMob} onClick={closeMenu}>
           Paintings
         </Link>
-        <Link to="/about" style={navItemStyleMob}>
+        <Link to="/about" style={navItemStyleMob} onClick={closeMenu}>
           About
         </Link>
       </Menu>
