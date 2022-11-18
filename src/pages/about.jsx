@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import about from "../assets/images/about/about.webp";
 import useViewport from "../hooks/viewport";
 
 function AboutPage() {
-  const { width, height } = useViewport();
+  const { width } = useViewport();
   const maxWidth = 600;
   return (
     <React.Fragment>

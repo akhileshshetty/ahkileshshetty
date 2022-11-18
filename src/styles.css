@@ -50,11 +50,30 @@ body {
 }
 
 .swiper-button-prev {
-  color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .swiper-button-next {
-  color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: red;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* change color of next 2 bullets in sequence to white*/
+
+.swiper-pagination-bullet-active-next, .swiper-pagination-bullet-active-next-next {
+background-color: white;
+}
+
+/* change color of previous bullet to white*/
+
+.swiper-pagination-bullet-active-prev {
+background-color: white;
 }
 
 a {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import VideoTemplate from "./video_template";
-import { sectionHeading, textStyle } from "../../styles/my_styles";
+import { sectionHeading } from "../../styles/my_styles";
 import { videos } from "./video_data";
 
 class FilmographyPage extends Component {
@@ -15,7 +15,7 @@ class FilmographyPage extends Component {
         </span>
         <br />
         <br />
-        <p style={{ fontSize: "calc(10px + 1vmin)", fontFamily: "LcAvenir" }}>
+        <p style={{ fontSize: "calc(10px + 1vmin)", fontFamily: "LcAvenir", marginLeft: "5vmin", marginRight: "5vmin" }}>
           You will find below the list of projects I've worked on as a writer
           and a director.
         </p>
@@ -25,6 +25,13 @@ class FilmographyPage extends Component {
         <br />
 
         <VideoTemplate left vid={videos[0]}/>
+        <VideoTemplate vid={videos[1]}/>
+        <VideoTemplate vid={videos[2]}/>
+        <VideoTemplate left vid={videos[3]}/>
+        <VideoTemplate vid={videos[4]}/>
+        <VideoTemplate left vid={videos[5]}/>
+        <VideoTemplate left vid={videos[6]}/>
+        <VideoTemplate vid={videos[7]}/>
 
         <br />
         <br />

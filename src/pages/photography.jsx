@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -41,7 +41,7 @@ import { sectionHeading, textStyle } from "../styles/my_styles";
 import useViewport from "../hooks/viewport";
 
 function PhotographyPage() {
-  const { width, height } = useViewport();
+  const { width } = useViewport();
   const TEXT_BREAKPOINT = 700;
   const textWidthAndMargins = {
     width: width < TEXT_BREAKPOINT ? `calc(${width}px - 5vmin)` : TEXT_BREAKPOINT,

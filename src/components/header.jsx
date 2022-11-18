@@ -1,5 +1,4 @@
-import { calculateNewValue } from "@testing-library/user-event/dist/utils";
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import useViewport from "../hooks/viewport";

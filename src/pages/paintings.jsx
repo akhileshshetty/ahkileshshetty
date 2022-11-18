@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import ptng1 from "../assets/images/paintings/ptng1.webp";
 import ptng2 from "../assets/images/paintings/ptng2.webp";
@@ -12,7 +12,7 @@ import useViewport from "../hooks/viewport";
 import { sectionHeading, textStyle } from "../styles/my_styles";
 
 function PaintingsPage() {
-  const { width, height } = useViewport();
+  const { width } = useViewport();
   const TEXT_BREAKPOINT = 700;
   const IMG_BREAKPOINT = 600;
   const textWidthAndMargins = {
