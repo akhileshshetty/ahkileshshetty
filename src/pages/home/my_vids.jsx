@@ -8,6 +8,9 @@ import { Pagination } from "swiper";
 
 import "../../styles.css";
 import {homePageVideos} from "./video_data_home";
+import { useRef } from "react";
+import useIsOnScreen from "../../hooks/is_visible";
+import { useEffect } from "react";
 
 
 function MyVideos() {
@@ -27,7 +30,7 @@ function MyVidsMobDisp() {
         // style={{ height: 400 }}
       >
         {/* {Array(27).map((_, i) => <SwiperSlide><img src={images[i]}/></SwiperSlide>)} */}
-        <SwiperSlide> <Video vid={homePageVideos[0]} /> </SwiperSlide>
+        <SwiperSlide> <div><Video vid={homePageVideos[0]} /></div> </SwiperSlide>
         <SwiperSlide> <Video vid={homePageVideos[1]} /> </SwiperSlide>
         <SwiperSlide> <Video vid={homePageVideos[2]} /> </SwiperSlide>
         <SwiperSlide> <Video vid={homePageVideos[3]} /> </SwiperSlide>
@@ -45,19 +48,32 @@ function MyVidsMobDisp() {
       </Swiper>
     </div>
   );
+
+
 }
 
 function Video(props) {
+  const ref = useRef(null);
+  const isVisible = useIsOnScreen(ref);
+
+  useEffect(() => {
+    let video = document.getElementById("videoId")
+    video.contentWindow.postMessage( '{"event":"command", "func":"pauseVideo", "args":""}', '*');
+  },[props.isVisible]);
   return (
+    <div style={{margin: 50}}>
     <iframe
+    id={`youtube_player${props.vid.id}`}
       width="940"
       height="530"
-      src={`https://www.youtube.com/embed/${props.vid.id}`}
+      src={`https://www.youtube.com/embed/${props.vid.id}?enablejsapi=1`}
       title={props.vid.title}
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
+      // enablejsapi="1"
     />
+    </div>
   );
 }
 

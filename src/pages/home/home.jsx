@@ -46,8 +46,8 @@ function HomePage() {
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-        autoplay
-      ></iframe>
+        autoplay={1} 
+      />
       <br /> <br /> <br /> <br /> <br />
       <br />
       <span className="App-text-brandon" style={{fontSize: "calc(20px + 2vmin)"}}>ABOUT ME</span>
