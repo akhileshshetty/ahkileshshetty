@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import WebsiteHeader from "./components/header";
@@ -10,6 +10,9 @@ import FilmographyPage from "./pages/filmography/filmography";
 import WebsiteFooter from "./components/footer";
 
 function App() {
+  useEffect(()=>{
+    document.title= "Akhilesh Shetty";
+  });
   return (
     <div className="App">
       <WebsiteHeader />

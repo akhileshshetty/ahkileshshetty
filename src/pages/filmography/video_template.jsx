@@ -22,6 +22,7 @@ function MobileVidTemplate(props) {
     <div>
       <br />
       <iframe
+      loading="lazy"
         width={props.width > 450? "402" : `calc(${props.width-20}px)`}
         height={props.width > 450? "226" : `calc(${(props.width-20)*226/402}px - 10px)`}
         src={`https://www.youtube.com/embed/${props.vid.id}`}
@@ -64,6 +65,7 @@ function DesktopVidTemplate(props) {
           </Col>
           <Col>
             <iframe
+            loading="lazy"
               width={props.width > 2000? "calc(402px + 0.2vmin)" : "402"}
               height={props.width > 2000? "calc((402px + 0.2vmin)*226/402)" : "226"}
               src={`https://www.youtube.com/embed/${props.vid.id}`}

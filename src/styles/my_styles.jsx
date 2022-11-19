@@ -10,7 +10,7 @@ const textStyle = {
 };
 
 const vidTitle ={
-    fontFamily: "BrandonGrotW01-Light",
+    fontFamily: "LcBrandon",
     textAlign: "left",
     fontSize: "calc(25px + 2vmin)",
 }

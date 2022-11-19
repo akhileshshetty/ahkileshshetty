@@ -56,6 +56,9 @@ function PaintingsPage() {
         areas of my mind that is not stimulated by other art forms.
       </p>
       <br />
+      <br />
+      <br />
+      <br />
       <img src={ptng1} alt="ptng1" style={imgWidthAndMargins} />
       <br />
       <img src={ptng2} alt="ptng2" style={imgWidthAndMargins} />

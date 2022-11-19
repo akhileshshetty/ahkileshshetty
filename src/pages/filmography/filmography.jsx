@@ -1,11 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import VideoTemplate from "./video_template";
 import { sectionHeading } from "../../styles/my_styles";
 import { videos } from "./video_data";
 
-class FilmographyPage extends Component {
-  state = {};
-  render() {
+function FilmographyPage() {
     return (
       <div className="justify-content-left App-text">
         <br />
@@ -38,7 +36,6 @@ class FilmographyPage extends Component {
         <br />
       </div>
     );
-  }
 }
 
 export default FilmographyPage;
