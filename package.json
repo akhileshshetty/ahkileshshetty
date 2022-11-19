@@ -1,7 +1,7 @@
 {
   "name": "react-website",
   "version": "0.1.0",
-  "homepage": "https://D-setia.github.io/shetty-website",
+  "homepage": "https://D-setia.github.io",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
