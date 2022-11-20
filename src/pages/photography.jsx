@@ -82,7 +82,7 @@ function PhotographyPage() {
         navigation={true}
         modules={[Navigation]}
         className="mySwiper"
-        style={{ height: 400 }}
+        style={{ height: 400, "--swiper-navigation-color": "rgba(255, 255, 255, 1)" }}
       >
         {/* {Array(27).map((_, i) => <SwiperSlide><img src={images[i]}/></SwiperSlide>)} */}
         <SwiperSlide>

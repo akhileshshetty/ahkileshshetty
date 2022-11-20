@@ -178,6 +178,7 @@ function MyVidsMob(props) {
         navigation={true}
         modules={[Navigation]}
         className="mySwiper"
+        style={{"--swiper-navigation-color": "rgba(255, 255, 255, 1)"}}
         onSlideNextTransitionStart={() => {
           const temp = currVidIndex;
           pause(homePageVideos[temp].id);
