@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/akhileshshetty/static/css/main.f0b46501.css",
-    "main.js": "/akhileshshetty/static/js/main.c996c2f7.js",
+    "main.js": "/akhileshshetty/static/js/main.57b36429.js",
     "static/js/787.e403dcb9.chunk.js": "/akhileshshetty/static/js/787.e403dcb9.chunk.js",
     "static/media/My-Avenir-LT-35-Light.ttf": "/akhileshshetty/static/media/My-Avenir-LT-35-Light.e7bf75f074188cf63c75.ttf",
     "static/media/Brandon-Grot-W01-Light.ttf": "/akhileshshetty/static/media/Brandon-Grot-W01-Light.57bc8125cd1371cd5941.ttf",
     "index.html": "/akhileshshetty/index.html",
     "main.f0b46501.css.map": "/akhileshshetty/static/css/main.f0b46501.css.map",
-    "main.c996c2f7.js.map": "/akhileshshetty/static/js/main.c996c2f7.js.map",
+    "main.57b36429.js.map": "/akhileshshetty/static/js/main.57b36429.js.map",
     "787.e403dcb9.chunk.js.map": "/akhileshshetty/static/js/787.e403dcb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f0b46501.css",
-    "static/js/main.c996c2f7.js"
+    "static/js/main.57b36429.js"
   ]
 }
