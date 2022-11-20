@@ -18,7 +18,7 @@ function App() {
       <WebsiteHeader />
       <Routes>
         <Route path="/" element={<HomePage/>} exact/>
-        <Route path="/shetty-website" element={<HomePage/>} exact/>
+        {/* <Route path="/akhileshshetty" element={<HomePage/>} exact/> */}
         <Route path="/filmography" element={<FilmographyPage/>}/>
         <Route path="/photography" element={<PhotographyPage/>}/>
         <Route path="/paintings" element={<PaintingsPage/>}/>

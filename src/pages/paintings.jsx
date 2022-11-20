@@ -1,13 +1,7 @@
 import React from "react";
 
-import ptng1 from "../assets/images/paintings/ptng1.webp";
-import ptng2 from "../assets/images/paintings/ptng2.webp";
-import ptng3 from "../assets/images/paintings/ptng3.webp";
-import ptng4 from "../assets/images/paintings/ptng4.webp";
-import ptng5 from "../assets/images/paintings/ptng5.webp";
-import ptng6 from "../assets/images/paintings/ptng6.webp";
-import ptng7 from "../assets/images/paintings/ptng7.webp";
 import useViewport from "../hooks/viewport";
+import { paintingsPageImages } from "../assets/images/image_data";
 
 import { sectionHeading, textStyle } from "../styles/my_styles";
 
@@ -59,9 +53,21 @@ function PaintingsPage() {
       <br />
       <br />
       <br />
-      <img src={ptng1} alt="ptng1" style={imgWidthAndMargins} />
+      <img src={paintingsPageImages[0]} alt="ptng1" style={imgWidthAndMargins} loading="lazy" />
       <br />
-      <img src={ptng2} alt="ptng2" style={imgWidthAndMargins} />
+      <img src={paintingsPageImages[1]} alt="ptng2" style={imgWidthAndMargins} loading="lazy" />
+      <br />
+      <img src={paintingsPageImages[2]} alt="ptng3" style={imgWidthAndMargins} loading="lazy" />
+      <br />
+      <img src={paintingsPageImages[3]} alt="ptng4" style={imgWidthAndMargins} loading="lazy" />
+      <br />
+      <img src={paintingsPageImages[4]} alt="ptng5" style={imgWidthAndMargins} loading="lazy" />
+      <br />
+      <img src={paintingsPageImages[5]} alt="ptng6" style={imgWidthAndMargins} loading="lazy" />
+      <br />
+      <img src={paintingsPageImages[6]} alt="ptng7" style={imgWidthAndMargins} loading="lazy" />
+      <br />
+      {/* <img src={ptng2} alt="ptng2" style={imgWidthAndMargins} />
       <br />
       <img src={ptng3} alt="ptng3" style={imgWidthAndMargins} />
       <br />
@@ -72,7 +78,7 @@ function PaintingsPage() {
       <img src={ptng6} alt="ptng6" style={imgWidthAndMargins} />
       <br />
       <img src={ptng7} alt="ptng7" style={imgWidthAndMargins} />
-      <br />
+      <br /> */}
     </div>
   );
 }

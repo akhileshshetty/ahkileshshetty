@@ -1,6 +1,6 @@
 import React from "react";
-import about from "../assets/images/about/about.webp";
 import useViewport from "../hooks/viewport";
+import { aboutPageImages } from "../assets/images/image_data";
 
 function AboutPage() {
   const { width } = useViewport();
@@ -8,7 +8,8 @@ function AboutPage() {
   return (
     <React.Fragment>
     <img
-      src={about}
+      src={aboutPageImages[0]}
+      loading="eager"
       alt="img not found"
       style={{ maxWidth: width < maxWidth ? width : maxWidth,  }}
     />

@@ -7,34 +7,7 @@ import "swiper/css/navigation";
 
 import "../styles.css";
 
-import img1 from "../assets/images/photography/img1.PNG";
-import img2 from "../assets/images/photography/img2.PNG";
-import img3 from "../assets/images/photography/img3.PNG";
-import img4 from "../assets/images/photography/img4.PNG";
-import img5 from "../assets/images/photography/img5.PNG";
-import img6 from "../assets/images/photography/img6.PNG";
-import img7 from "../assets/images/photography/img7.PNG";
-import img8 from "../assets/images/photography/img8.PNG";
-import img9 from "../assets/images/photography/img9.PNG";
-import img10 from "../assets/images/photography/img10.PNG";
-import img11 from "../assets/images/photography/img11.PNG";
-import img12 from "../assets/images/photography/img12.PNG";
-import img13 from "../assets/images/photography/img13.PNG";
-import img14 from "../assets/images/photography/img14.PNG";
-import img15 from "../assets/images/photography/img15.PNG";
-import img16 from "../assets/images/photography/img16.PNG";
-import img17 from "../assets/images/photography/img17.PNG";
-import img18 from "../assets/images/photography/img18.PNG";
-import img19 from "../assets/images/photography/img19.PNG";
-import img20 from "../assets/images/photography/img20.PNG";
-import img21 from "../assets/images/photography/img21.PNG";
-import img22 from "../assets/images/photography/img22.PNG";
-import img23 from "../assets/images/photography/img23.PNG";
-import img24 from "../assets/images/photography/img24.PNG";
-import img25 from "../assets/images/photography/img25.PNG";
-import img26 from "../assets/images/photography/img26.PNG";
-import img27 from "../assets/images/photography/img27.PNG";
-// import img28 from '../images/photography/img28.PNG';
+import { photographyPageImages } from "../assets/images/image_data";
 
 import { Navigation } from "swiper";
 import { sectionHeading, textStyle } from "../styles/my_styles";
@@ -86,85 +59,85 @@ function PhotographyPage() {
       >
         {/* {Array(27).map((_, i) => <SwiperSlide><img src={images[i]}/></SwiperSlide>)} */}
         <SwiperSlide>
-          <img src={img1} alt="img1" />
+          <img src={photographyPageImages[0]} alt="img1" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img2} alt="img2" />
+          <img src={photographyPageImages[1]} alt="img2" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img3} alt="img3" />
+          <img src={photographyPageImages[2]} alt="img3" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img4} alt="img4" />
+          <img src={photographyPageImages[3]} alt="img4" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img5} alt="img5" />
+          <img src={photographyPageImages[4]} alt="img5" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img6} alt="img6" />
+          <img src={photographyPageImages[5]} alt="img6" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img7} alt="img7" />
+          <img src={photographyPageImages[6]} alt="img7" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img8} alt="img8" />
+          <img src={photographyPageImages[7]} alt="img8" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img9} alt="img9" />
+          <img src={photographyPageImages[8]} alt="img9" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img10} alt="img10" />
+          <img src={photographyPageImages[9]} alt="img10" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img11} alt="img11" />
+          <img src={photographyPageImages[10]} alt="img11" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img12} alt="img12" />
+          <img src={photographyPageImages[11]} alt="img12" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img13} alt="img13" />
+          <img src={photographyPageImages[12]} alt="img13" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img14} alt="img14" />
+          <img src={photographyPageImages[13]} alt="img14" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img15} alt="img15" />
+          <img src={photographyPageImages[14]} alt="img15" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img16} alt="img16" />
+          <img src={photographyPageImages[15]} alt="img16" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img17} alt="img17" />
+          <img src={photographyPageImages[16]} alt="img17" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img18} alt="img18" />
+          <img src={photographyPageImages[17]} alt="img18" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img19} alt="img19" />
+          <img src={photographyPageImages[18]} alt="img19" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img20} alt="img20" />
+          <img src={photographyPageImages[19]} alt="img20" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img21} alt="img21" />
+          <img src={photographyPageImages[20]} alt="img21" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img22} alt="img22" />
+          <img src={photographyPageImages[21]} alt="img22" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img23} alt="img23" />
+          <img src={photographyPageImages[22]} alt="img23" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img24} alt="img24" />
+          <img src={photographyPageImages[23]} alt="img24" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img25} alt="img25" />
+          <img src={photographyPageImages[24]} alt="img25" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img26} alt="img26" />
+          <img src={photographyPageImages[25]} alt="img26" loading="lazy" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src={img27} alt="img27" />
+          <img src={photographyPageImages[26]} alt="img27" loading="lazy" />
         </SwiperSlide>
       </Swiper>
 

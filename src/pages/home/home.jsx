@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
-import img1 from "../../assets/images/home/img1.webp";
 import ContactSection from "./contact_section";
 import homeStyles from "./home.module.css";
 import { sectionHeading, textStyle } from "../../styles/my_styles";
 import useViewport from "../../hooks/viewport";
 import MyVideos from "./my_vids";
+import { homePageImages } from "../../assets/images/image_data";
 // import { useRef } from react;
 
 function HomePage() {
@@ -74,7 +74,8 @@ function HomePage() {
         understanding of the Audio Visual medium of film.{" "}
       </p>
       <img
-        src={img1}
+        src={homePageImages[0]}
+        loading="eager"
         alt="img not found"
         style={{
           width: width < 740 ? width - 40 : "476",
